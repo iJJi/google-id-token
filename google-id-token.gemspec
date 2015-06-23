@@ -15,7 +15,7 @@
 
 Gem::Specification.new do |s|
   s.name = "google-id-token"
-  s.version = "1.2.0"
+  s.version = "1.2.1"
 
   s.homepage = "https://code.google.com/p/google-id-token/"
   s.summary = 'Google ID Token utilities'
@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.files = ["lib/google-id-token.rb", "README.rdoc" ]
 
   s.add_runtime_dependency "multi_json"
-  s.add_runtime_dependency "jwt"
+  s.add_runtime_dependency "jwt", '~> 1.5.1'
 
   s.add_development_dependency "fakeweb"
   s.add_development_dependency "rake"

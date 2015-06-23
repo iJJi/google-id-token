@@ -102,7 +102,7 @@ module GoogleIDToken
       @certs.detect do |key, cert|
         begin
           public_key = cert.public_key
-          @token = JWT.decode(token, public_key, !!public_key)
+          @token, header = JWT.decode(token, public_key, !!public_key)
           @token = @token.first if @token.kind_of?(Array)
 
           # in Feb 2013, the 'cid' claim became the 'azp' claim per changes
